@@ -1,15 +1,15 @@
- import React, { useEffect } from "react";
-import ReactDOM from "react-dom/client";
-import AOS from "aos";
+ import AOS from "aos";
 import "aos/dist/aos.css";
- import "./assets/css/themify-icons.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import App from "./App.jsx";
-import "./App.css";
- import "bootstrap/dist/js/bootstrap.bundle.min.js";
- import "slick-carousel/slick/slick.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useEffect } from "react";
+import ReactDOM from "react-dom/client";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./App.css";
+import App from "./App.jsx";
+import "./assets/css/themify-icons.css";
  
 function Main() {
   useEffect(() => {
@@ -28,3 +28,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Main />
  
 );
+ 
