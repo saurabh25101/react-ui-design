@@ -42,7 +42,7 @@
         <div className="col-12 col-sm-12 col-lg-4 animate-slide ">
           <div className="card text-white border-0 rounded-0 h-100 py-5 " data-aos="fade-up" data-aos-delay="600">
             <span
-              className="card-icon p-4 rounded-circle text-light translate-middle start-50 top-0 position-absolute d-flex align-items-center justify-content-center my-2">
+              className="card-icon p-3 rounded-circle text-light translate-middle start-50 top-0 position-absolute d-flex align-items-center justify-content-center my-2">
               <i className="ti-timer fs-1 text-light"></i>
             </span>
             <div className="card-body position-relative p-4">

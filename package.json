@@ -24,7 +24,8 @@
     "react-scroll": "^1.9.3",
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
-    "themify-icons": "^1.0.0"
+    "themify-icons": "^1.0.0",
+    "themify-icons-scss": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
