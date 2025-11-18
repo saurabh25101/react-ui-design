@@ -23,7 +23,12 @@ export default function Home() {
 
       <FeaturesCard />
       <FeaturesSection />
-      < WorkSection/>
+      <WorkSection 
+  backgroundColor="#1a1a1a"  
+  btnText="See All Works" 
+  btnClass="btn-outline-light" 
+/>
+
       <FunfactSection />
       <ProductSection />
       <SubscribeSection />

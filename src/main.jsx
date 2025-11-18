@@ -7,16 +7,21 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+ 
+
 import "./App.css";
 import App from "./App.jsx";
 import "./assets/css/themify-icons.css";
- 
+  
+
 function Main() {
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      once: true,
-    });
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+});
+
   }, []);
 
   return <App />;

@@ -3,8 +3,62 @@ import Slider from "react-slick";
 import "../aboutpages/css/about.css";
 import Card from "./_components/Cardcomponent";
 
+import img1 from "/src/assets/Img/img_1.jpg";
+import img2 from "/src/assets/Img/img_2.jpg";
+import img3 from "/src/assets/Img/img_3.jpg";
+import img4 from "/src/assets/Img/img_4.jpg";
+import img5 from "/src/assets/Img/img_5.jpg";
+import img6 from "/src/assets/Img/img_6.jpg";
+
+const images = [img1, img2, img3, img4, img5, img6];
+
+const teamMembers = [
+  {
+    img: "/src/assets/Img/person_1.jpg",
+    name: "Jean Smith",
+    role: "Developer",
+    about:
+      "Quos quia provident tates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.",
+  },
+  {
+    img: "/src/assets/Img/person_2.jpg",
+    name: "Hush Raven",
+    role: "Designer",
+    about:
+      "Quos quia provident ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.",
+  },
+  {
+    img: "/src/assets/Img/person_3.jpg",
+    name: "Alex King",
+    role: "Manager",
+    about:
+      "Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque.",
+  },
+  {
+    img: "/src/assets/Img/person_1.jpg",
+    name: "Jean",
+    role: "Tester",
+    about:
+      "Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.",
+  },
+  {
+    img: "/src/assets/Img/person_2.jpg",
+    name: "Rab",
+    role: "Support",
+    about:
+      "Quos quia provident consequuntur culpa maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque.",
+  },
+  {
+    img: "/src/assets/Img/person_3.jpg",
+    name: "Ankit",
+    role: "React Developer",
+    about:
+      "Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.",
+  },
+];
+
 function About() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -15,19 +69,17 @@ function About() {
 
   return (
     <>
-      <div className="content position-absolute top-50 start-50 translate-middle text-center text-white">
-        <h1
-          className="pb-4 fw-normal display-4"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          ABOUT US
-        </h1>
-        <h4 className="fw-normal pb-4" data-aos="fade-up" data-aos-delay="200">
+      {/* Hero Section */}
+      <div
+        className="content position-absolute top-50 start-50 translate-middle text-center text-white"
+        data-aos="fade-up"
+      >
+        <h1 className="pb-4 fw-normal display-4">ABOUT US</h1>
+        <h4 className="fw-normal pb-4">
           Free HTML5 Bootstrap Templates Made <em>by</em>{" "}
           <Link
             to="http://gettemplates.co/"
-            className="text-decoration-none num-icon text-warning pb-5"
+            className="text-decoration-none num-icon text-warning"
             target="_blank"
           >
             GetTemplates.co
@@ -35,8 +87,9 @@ function About() {
         </h4>
       </div>
 
-      <div className="container-fluid text-black mt-5 pt-5">
-        <div className="text-center ">
+      {/* Company History */}
+      <div className="container-fluid text-black mt-5 pt-5" data-aos="fade-up">
+        <div className="text-center mb-4">
           <h1>Company History</h1>
           <p>
             Dignissimos asperiores vitae velit veniam totam fuga molestias
@@ -44,8 +97,8 @@ function About() {
           </p>
         </div>
 
-        <div className="row px-4 text-black-50 p-4 ">
-          <div className="col-12 col-lg-6 ">
+        <div className="row px-4 text-black-50 p-4">
+          <div className="col-12 col-lg-6">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
               repudiandae maiores officiis illo soluta accusantium architecto
@@ -53,8 +106,7 @@ function About() {
               impedit. Earum dolor omnis officiis tenetur dolorum.
             </p>
           </div>
-
-          <div className="col-12 col-lg-6 ">
+          <div className="col-12 col-lg-6">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
               repudiandae maiores officiis illo soluta accusantium architecto
@@ -63,81 +115,45 @@ function About() {
             </p>
           </div>
         </div>
-
-        <div className=" p-5   mb-5  border-bottom ">
+ 
+        <div
+          className="p-5 mb-5 border-bottom"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <Slider {...settings}>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_1.jpg" />
-            </div>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_2.jpg" />
-            </div>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_3.jpg" />
-            </div>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_4.jpg" />
-            </div>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_5.jpg" />
-            </div>
-            <div className="w-100 h-100 ratio ratio-4x3">
-              <img src="/src/assets/Img/img_6.jpg" />
-            </div>
+            {images.map((img, index) => (
+              <div key={index} className="w-100 h-100 ratio ratio-4x3">
+                <img src={img} alt={`Slide ${index + 1}`} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
-      <div className="text-center">
+
+      
+      <div className="text-center" data-aos="fade-up">
         <h1>Meet The Team</h1>
         <p>
           Dignissimos asperiores vitae velit veniam totam fuga molestias
           accusamus alias autem provident. Odit ab aliquam dolor eius.
         </p>
       </div>
-           <div className="container"> 
-      <div className="row mt-5 pt-5 mb-5 pb-5 gx-5">
-        <Card
-          img="/src/assets/Img/person_1.jpg"
-          name="Jean Smith"
-          role="Developer"
-          about=" Quos quia provident  tates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci."
-        />
 
-        <Card
-          img="/src/assets/Img/person_2.jpg"
-          name="Hush Raven"
-          role="Designer"
-          about=" Quos quia provident  ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci."
-        />
-
-        <Card
-          img="/src/assets/Img/person_3.jpg"
-          name="Alex King"
-          role="Manager"
-          about="Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque   "
-        />
-
-        <Card
-          img="/src/assets/Img/person_1.jpg"
-          name="Jean"
-          role="Tester"
-          about="Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci. "
-        />
-
-        <Card
-          img="/src/assets/Img/person_2.jpg"
-          name="Rab"
-          role="Support"
-          about=" Quos quia provident consequuntur cul ne maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possi i."
-        />
-
-        <Card
-          img="/src/assets/Img/person_3.jpg"
-          name="Ankit"
-          role="React Developer"
-          about="Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci. "
-        />
-      </div>
+      <div className="container" data-aos="fade-up">
+        <div className="row mt-5 pt-5 mb-5 pb-5 gx-5">
+          {teamMembers.map((member, index) => (
+            <Card
+              key={index}
+              img={member.img}
+              name={member.name}
+              role={member.role}
+              about={member.about}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}  
+            />
+          ))}
+        </div>
       </div>
     </>
   );
