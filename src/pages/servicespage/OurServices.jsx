@@ -1,7 +1,7 @@
  import { Link } from "react-router-dom";
 import ServiceCard from "./components/serviceCard";
 
-function Services() {
+function OurServices() {
   return (
     <>
       <div className="content position-absolute top-50 start-50 translate-middle text-center text-white">
@@ -133,4 +133,4 @@ Retina Ready"
   );
 }
 
-export default Services;
+export default OurServices;

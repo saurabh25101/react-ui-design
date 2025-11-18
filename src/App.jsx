@@ -2,12 +2,12 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
- import About from "./pages/aboutpages/About";
+import About from "./pages/aboutpages/About";
 import Connect from "./pages/Connect";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Portfolio from "./pages/Portfolio";
-import Services from "./pages/servicespage/Services";
+import OurServices from "./pages/servicespage/OurServices";
  
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
            <Route element={<Layout/>}> 
           <Route path="/about" element={<About/>}/>
-          <Route path="/services" element={<Services/>}/>
+          <Route path="/services" element={<OurServices/>}/>
           <Route path="/portfolio" element={<Portfolio/>}/>
           <Route path="/connect" element={<Connect />} />
           </Route>
