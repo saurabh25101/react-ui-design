@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "../aboutpages/css/about.css";
-import Card from "./_components/Cardcomponent";
+import Card from "./components/Cardcomponent";
 
 import img1 from "/src/assets/Img/img_1.jpg";
 import img2 from "/src/assets/Img/img_2.jpg";
