@@ -6,7 +6,6 @@ import "./App.css";
 import Connect from "./pages/Connect";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
- 
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/servicespage/Services";
  
