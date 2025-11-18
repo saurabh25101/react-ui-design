@@ -157,9 +157,9 @@ function Navbar() {
           </div>
 
           <div
-            className="offcanvas offcanvas-end text-bg-dark d-lg-none "data-bs-dismiss="offcanvas"
+            className="offcanvas offcanvas-end text-bg-dark d-lg-none  px-4"data-bs-dismiss="offcanvas"
 
-            id="offcanvasMenu"
+            id="offcanvasMenu"  style={{ width: "50%" }}
           >
             <div className="offcanvas-header">
               <button
