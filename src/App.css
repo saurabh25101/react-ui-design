@@ -28,7 +28,7 @@
  }
 
  .card {
-   margin-top: -70px;
+   margin-top: -50px;
  }
 
  .num {
@@ -37,12 +37,12 @@
  }
 
  .card-icon {
-   background-color: #13a484;
+   background-color: #15a585;
  }
 
 
  .num-icon {
-   color: aquamarine;
+   color:#15a585;
  }
 
  .work-img {
@@ -107,3 +107,15 @@
  html {
   scroll-behavior: smooth;
 }
+
+
+
+ 
+ /* Hover open dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+ 
+
+ 
