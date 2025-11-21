@@ -13,7 +13,7 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img1,
       title: "Modern Design",
       description: "Creative and pixel-perfect layouts for modern web projects",
-      size: "col-12 col-sm-6 col-lg-7",
+      size: "col-12 col-sm-6 col-md-6 col-lg-7",
       overlap: "work-img-overlap-1",
       delay: 0,
     },
@@ -22,7 +22,7 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img2,
       title: "Clean UI",
       description: "Simple, elegant and user-friendly design experiences.",
-      size: "col-12 col-sm-6 col-lg-5",
+      size: "col-12 col-sm-6 col-md-6 col-lg-5",
       overlap: "work-img-overlap-2",
       delay: 200,
     },
@@ -31,7 +31,7 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img3,
       title: "Responsive",
       description: "Adapts beautifully on any screen size and device",
-      size: "col-12 col-sm-6 col-lg-6",
+      size: "col-12 col-sm-6  col-md-6 col-lg-6",
       overlap: "work-img-overlap-3",
       delay: 400,
     },
@@ -40,7 +40,7 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img4,
       title: "Creative Projects",
       description: "Designed with imagination and cutting-edge technology",
-      size: "col-12 col-sm-6 col-lg-6",
+      size: "col-12 col-sm-6  col-md-6 col-lg-6",
       overlap: "work-img-overlap-4",
       delay: 600,
     },
@@ -49,7 +49,7 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img5,
       title: "Custom Solutions",
       description: "Tailored experiences built to fit your business goals.",
-      size: "col-12 col-sm-6 col-lg-5",
+      size: "col-12 col-sm-6 col-md-6  col-lg-5",
       overlap: "work-img-overlap-5",
       delay: 750,
     },
@@ -58,23 +58,21 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       imgSrc: img6,
       title: "Performance",
       description: "Optimized for speed, quality and smooth experience",
-      size: "col-12 col-sm-6 col-lg-7",
+      size: "col-12 col-sm-6 col-md-6 col-lg-7",
       overlap: "work-img-overlap-6",
       delay: 950,
     },
   ];
 
-  const repeatedImages = Array(repeatTimes)
-  .fill(0)          // array ko 0 se bhar diya
-  .map(() => images) // har 0 ko images array se replace kiya
-  .flat();           // nested images ko ek array me kar diya
+  const repeatedImages = Array(repeatTimes).fill(images).flat();
 
 
   return (
     <div className="container-fluid" style={{ background: backgroundColor }}>
-      <div className="row d-flex py-5 px-2 g-3">
+      <div className="conatainer p-5"> 
+      <div className="row d-flex py-5 px-2 g-3 px-5 ">
         <div
-          className="col-12 text-center text-light"
+          className="col-12  text-center text-light"
           data-aos="fade-up"
           data-aos-delay="0"
         >
@@ -84,8 +82,9 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
 
         {repeatedImages.map((image, index) => (
           <div
-            className={`${image.size} d-flex`}
-            key={`${image.id}-${index}`}  //unique id ke liye banya hu
+            className={`  ${image.size} d-flex`}
+            key={`${image.id}-${index}`}
+
             data-aos="fade-up"
             data-aos-delay={image.delay}
           >
@@ -117,12 +116,13 @@ function WorkSection({ backgroundColor, repeatTimes = 1, btnText, btnClass }) {
       <div className="text-center mt-4">
         <a
           href="#"
-          className={`btn btn-lg align-self-center mt-auto mb-5 px-5 ${btnClass}`}
+          className={`btn btn-lg align-self-center mt-auto mb-5 px-5 rounded-0  ${btnClass}`}
           data-aos="fade-up"
           data-aos-delay="250"
         >
           {btnText}
         </a>
+      </div>
       </div>
     </div>
   );

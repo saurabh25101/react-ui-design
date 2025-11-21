@@ -24,7 +24,7 @@ export default function Home() {
       <FeaturesCard />
       <FeaturesSection />
       <WorkSection 
-  backgroundColor="#1a1a1a"  
+  backgroundColor="#303841"  
   btnText="See All Works" 
   btnClass="btn-outline-light" 
 />

@@ -9,6 +9,7 @@ import img3 from "/src/assets/Img/img_3.jpg";
 import img4 from "/src/assets/Img/img_4.jpg";
 import img5 from "/src/assets/Img/img_5.jpg";
 import img6 from "/src/assets/Img/img_6.jpg";
+import PageHeader from "./components/PageHeader";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
@@ -69,27 +70,15 @@ function About() {
 
   return (
     <>
-      {/* Hero Section */}
-      <div
-        className="content position-absolute top-50 start-50 translate-middle text-center text-white"
-        data-aos="fade-up"
-      >
-        <h1 className="pb-4 fw-normal display-4">ABOUT US</h1>
-        <h4 className="fw-normal pb-4">
-          Free HTML5 Bootstrap Templates Made <em>by</em>{" "}
-          <Link
-            to="http://gettemplates.co/"
-            className="text-decoration-none num-icon text-warning"
-            target="_blank"
-          >
-            GetTemplates.co
-          </Link>
-        </h4>
-      </div>
-
-      {/* Company History */}
-      <div className="container-fluid text-black mt-5 pt-5" data-aos="fade-up">
-        <div className="text-center mb-4">
+         <PageHeader title="ABOUT US"/>
+    
+    
+      <div className="container-fluid text-black mt-5 pt-5">
+        <div
+          className="text-center mb-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h1>Company History</h1>
           <p>
             Dignissimos asperiores vitae velit veniam totam fuga molestias
@@ -97,7 +86,11 @@ function About() {
           </p>
         </div>
 
-        <div className="row px-4 text-black-50 p-4">
+        <div
+          className="row px-4 text-black-50 p-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <div className="col-12 col-lg-6">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
@@ -115,11 +108,11 @@ function About() {
             </p>
           </div>
         </div>
- 
+
         <div
           className="p-5 mb-5 border-bottom"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="200"
         >
           <Slider {...settings}>
             {images.map((img, index) => (
@@ -131,8 +124,7 @@ function About() {
         </div>
       </div>
 
-      
-      <div className="text-center" data-aos="fade-up">
+      <div className="text-center" data-aos="fade-up" data-aos-delay="400">
         <h1>Meet The Team</h1>
         <p>
           Dignissimos asperiores vitae velit veniam totam fuga molestias
@@ -140,7 +132,7 @@ function About() {
         </p>
       </div>
 
-      <div className="container" data-aos="fade-up">
+      <div className="container" data-aos="fade-up" data-aos-delay="500">
         <div className="row mt-5 pt-5 mb-5 pb-5 gx-5">
           {teamMembers.map((member, index) => (
             <Card
@@ -150,7 +142,7 @@ function About() {
               role={member.role}
               about={member.about}
               data-aos="fade-up"
-              data-aos-delay={index * 100}  
+              data-aos-delay={index * 100}
             />
           ))}
         </div>
